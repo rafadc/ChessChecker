@@ -4,24 +4,24 @@ class Board
 
 	def initialize(file)
 		@board = []
-		@board_hash = {} 
+		@board_hash = {}
 		File.open(file).each do |line|
 			@board << line.split(' ')
 		end
 		@board
-	end #This is the end of the initialize method
+	end
 
 	def show
 		@board
-	end #This is the end of the show method
+	end
 
 	def position(pos_string)
 		col_num = pos_string[0].ord - 97
-		row_num = pos_string[1].to_i - 1 
+		row_num = pos_string[1].to_i - 1
 		@board[row_num][col_num]
 	end
 
-end #THIS IS THE END OF THE BOARD CLASSS
+end
 
 board = Board.new('simple_text.txt')
 #print board.show
@@ -53,9 +53,9 @@ class Bishop
 	end
 
 	def valid?(new_bishop_pos)
-		@bishop_pos[0] + 1 == new_bishop_pos[0] && @bishop_pos[1] + 1 == new_bishop_pos[1] 
-		@bishop_pos[0] + 1 == new_bishop_pos[0] && @bishop_pos[1] + 1 == new_bishop_pos[1] 
-	
+		@bishop_pos[0] + 1 == new_bishop_pos[0] && @bishop_pos[1] + 1 == new_bishop_pos[1]
+		@bishop_pos[0] + 1 == new_bishop_pos[0] && @bishop_pos[1] + 1 == new_bishop_pos[1]
+
 	end
 end
 
