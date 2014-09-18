@@ -24,10 +24,7 @@ end
 class SimpleMoves
 
 	def initialize(file)
-		@moves = []
-		File.open(file).each do |line|
-			@moves << line.split(' ')
-		end
+		@moves = File.open(file).map {|line| line.split(' ')}
 	end
 
 	def move_pairs
