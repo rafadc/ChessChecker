@@ -7,7 +7,6 @@ class Board
 
 	def initialize(file)
 		@board = []
-		@board_hash = {}
 		File.open(file).each do |line|
 			@board << line.split(' ')
 		end
