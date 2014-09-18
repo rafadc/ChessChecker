@@ -10,7 +10,6 @@ class Board
 		File.open(file).each do |line|
 			@board << line.split(' ')
 		end
-		@board
 	end
 
 	def show
@@ -40,14 +39,3 @@ class SimpleMoves
 		end
 	end
 end
-
-
-
-
-
-
-
-
-
-
-
