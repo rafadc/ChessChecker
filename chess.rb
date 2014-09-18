@@ -6,10 +6,7 @@ require_relative 'pieces/bishop'
 class Board
 
 	def initialize(file)
-		@board = []
-		File.open(file).each do |line|
-			@board << line.split(' ')
-		end
+		@board = File.open(file).map {|line| line.split(' ')}
 	end
 
 	def show
